@@ -1,0 +1,264 @@
+:root {
+  --bg: #f3f7fb;
+  --card: #ffffff;
+  --muted: #6c757d;
+  --primary: linear-gradient(90deg, #0066cc, #0096d6);
+  --accent: #06d6a0;
+  --accent-2: #118ab2;
+  --glass: rgba(255, 255, 255, 0.7);
+  --shadow: 0 10px 30px rgba(15, 30, 50, 0.06);
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  color: #0b2540
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 26px;
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  color: white;
+  box-shadow: 0 6px 20px rgba(2, 27, 48, 0.08);
+}
+
+.topbar .brand {
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center
+}
+
+.topbar nav a {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  margin-left: 16px;
+  font-weight: 600
+}
+
+.container {
+  max-width: 1200px;
+  margin: 28px auto;
+  padding: 0 18px
+}
+
+/* cards */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  margin-bottom: 18px;
+}
+
+/* layout */
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1.6fr;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width:1000px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* headings */
+h1,
+h2,
+h3 {
+  margin: 0 0 8px 0
+}
+
+.small {
+  color: var(--muted);
+  font-size: 0.95rem
+}
+
+/* inputs/buttons */
+.input,
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 8px;
+  border: 1px solid #e6eef6;
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  color: #fff;
+  font-weight: 700;
+}
+
+.button.ghost {
+  background: transparent;
+  color: var(--accent-2);
+  border: 1px solid #e6eef6
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eef7ff;
+  color: #0077b6;
+  font-weight: 700
+}
+
+/* stats mini cards */
+.stat-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px
+}
+
+.stat {
+  flex: 1;
+  background: linear-gradient(180deg, #ffffff, #f7fbff);
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(10, 40, 80, 0.04);
+}
+
+.stat h3 {
+  margin: 0;
+  color: #073b4c
+}
+
+.stat p {
+  margin: 6px 0 0 0;
+  color: var(--muted)
+}
+
+/* lists */
+.click-list {
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+
+.click-list li {
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fafcff;
+  border: 1px solid #f0f6fb
+}
+
+.click-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(10, 40, 80, 0.04)
+}
+
+.click-list .meta {
+  color: var(--muted);
+  font-size: 0.92rem
+}
+
+/* table */
+.table-wrap {
+  overflow: auto
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #f0f3f6;
+  text-align: left
+}
+
+.table th {
+  color: var(--muted);
+  font-weight: 700
+}
+
+/* detail panel */
+.detail-panel {
+  background: linear-gradient(90deg, #f8fcff, #ffffff);
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #eef7ff;
+}
+
+.detail-panel h4 {
+  margin: 0 0 8px 0
+}
+
+.detail-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between
+}
+
+/* small utilities */
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center
+}
+
+.right {
+  margin-left: auto
+}
+
+.muted {
+  color: var(--muted)
+}
+
+.center {
+  text-align: center
+}
+
+/* modal (simple) */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 12, 32, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 90
+}
+
+.modal {
+  width: 520px;
+  max-width: 92%;
+  background: var(--card);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: var(--shadow)
+}

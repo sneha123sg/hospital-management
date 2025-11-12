@@ -1,0 +1,229 @@
+.topbar {
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  color: white;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar .brand {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.topbar nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.topbar nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  padding: 20px;
+  min-height: 80vh;
+}
+
+.footer {
+  text-align: center;
+  background: #023e8a;
+  color: white;
+  padding: 12px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
+
+/* --- General Card Layout --- */
+.card {
+  background: #ffffff;
+  max-width: 710px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid #0077b6;
+  animation: fadeIn 0.6s ease;
+}
+/* .card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%; 
+  max-width: 900px;
+}
+*/
+
+/* --- Form Layout --- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h2 {
+  text-align: center;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+/* --- Inputs --- */
+input,
+select {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #0077b6;
+  box-shadow: 0 0 5px rgba(0, 119, 182, 0.3);
+}
+
+/* --- Labels --- */
+label {
+  font-weight: 500;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* --- Buttons --- */
+.button,
+button {
+  background: linear-gradient(90deg, #0077b6, #0096c7);
+  color: white;
+  font-size: 1rem;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover,
+button:hover {
+  background: linear-gradient(90deg, #023e8a, #0077b6);
+  transform: translateY(-2px);
+}
+
+/* --- File Inputs --- */
+input[type="file"] {
+  border: 1px dashed #90e0ef;
+  background: #f8f9fa;
+  cursor: pointer;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+input[type="file"]:hover {
+  background: #e3f2fd;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .card {
+    padding: 25px 20px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  input,
+  select {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- Animation --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  width: 90%;
+}
+
+.patient-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.form-left, .form-right {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+
+.add-btn { background-color: #06d6a0; }
+.cancel-btn { background-color: #adb5bd; }
+.edit-btn { background-color: #ffb703; }
+.delete-btn { background-color: #d62828; }
+.report-btn { background-color: #118ab2; margin-left: 5px; }
+.bill-btn { background-color: #06d6a0; margin-left: 5px; }
+
+.patient-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.patient-table th, .patient-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.patient-table th {
+  background-color: #f4f4f9;
+  font-weight: 600;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1611691547500-0b294d10b20d?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+}
